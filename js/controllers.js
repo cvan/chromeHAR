@@ -86,9 +86,13 @@
       return labels;
     };
 
-    $scope.setSort = function(sort) {
+    $scope.setSort = function(sort, $event) {
       $scope.predicate = sort;
       $scope.reverse = !$scope.reverse;
+      var $target = $($event.currentTarget);
+      $('.sorted').not($target).removeClass('sorted');
+      $target.removeClass($scope.reverse ? 'asc' : 'desc');
+      $target.addClass('sorted ' + ($scope.reverse ? 'desc' : 'asc'));
     };
 
     $scope.toggleReqHeaders = function() {

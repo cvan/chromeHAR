@@ -89,22 +89,22 @@
                   </colgroup>
                   <tbody>
                     <tr>
-                      <th class="name-column sortable" ng-click="setSort('nameSort');">
+                      <th class="name-column sortable" ng-click="setSort('nameSort', $event)">
                         <div>Name<div class="network-header-subtitle">Path</div></div>
                       </th>
-                      <th class="method-column sortable" ng-click="setSort('method');">
+                      <th class="method-column sortable" ng-click="setSort('method', $event)">
                         <div>Method</div>
                       </th>
-                      <th class="status-column sortable" ng-click="setSort('status');">
+                      <th class="status-column sortable" ng-click="setSort('status', $event)">
                         <div>Status<div class="network-header-subtitle">Text</div></div>
                       </th>
-                      <th class="type-column sortable" ng-click="setSort('mimeType');">
+                      <th class="type-column sortable" ng-click="setSort('mimeType', $event)">
                         <div>Type</div>
                       </th>
-                      <th class="size-column sortable" ng-click="setSort('size');">
+                      <th class="size-column sortable" ng-click="setSort('size', $event)">
                         <div>Size<div class="network-header-subtitle">Content</div></div>
                       </th>
-                      <th class="time-column sortable" ng-click="setSort('timeSort')">
+                      <th class="time-column sortable" ng-click="setSort('timeSort', $event)">
                         <div>Time<div class="network-header-subtitle">Latency</div></div>
                       </th>
                       <th class="timeline-column sort-ascending">
