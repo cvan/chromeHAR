@@ -149,6 +149,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    position: fixed;
     margin-right: -14px;
     background-color: rgb(101, 111, 130);
 }
@@ -202,4 +203,41 @@
 
 .sortable.sorted.asc > div::after {
   content: "\25B2";  /* ▲ */
+}
+
+.fixedsticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+  position: static;
+}
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+  position: fixed;
+}
+.fixedsticky-dummy {
+  display: none;
+}
+.fixedsticky-on + .fixedsticky-dummy {
+  display: block;
+}
+
+/* Fixed-Sticky CSS */
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+#top-a {
+  top: 32px;
+}
+.fixedsticky {
+  top: 16px;
 }
